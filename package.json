@@ -34,7 +34,8 @@
       "typescript": "^5.2.2",
       "vue": "^2.6.12",
       "vue-class-component": "^7.2.3",
-      "vue-template-compiler": "^2.6.12"
+      "vue-template-compiler": "^2.6.12",
+      "swrv":"1.0.4"
     },
     "typings": "./lib/index.d.ts",
     "dependencies": {},

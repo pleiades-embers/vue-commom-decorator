@@ -29,6 +29,9 @@ devDependencies:
   rollup:
     specifier: ^2.33.3
     version: 2.79.1
+  swrv:
+    specifier: 1.0.4
+    version: 1.0.4(vue@2.7.14)
   ts-jest:
     specifier: ^26.4.4
     version: 26.5.6(jest@26.6.3)(typescript@5.2.2)
@@ -3429,6 +3432,14 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /swrv@1.0.4(vue@2.7.14):
+    resolution: {integrity: sha512-zjEkcP8Ywmj+xOJW3lIT65ciY/4AL4e/Or7Gj0MzU3zBJNMdJiT8geVZhINavnlHRMMCcJLHhraLTAiDOTmQ9g==}
+    peerDependencies:
+      vue: '>=3.2.26 < 4'
+    dependencies:
+      vue: 2.7.14
     dev: true
 
   /symbol-tree@3.2.4:
