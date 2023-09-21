@@ -2,15 +2,16 @@ import { createDecorator } from 'vue-class-component';
 import useSWR from 'swrv';
 
 export function UseSWR(key: string, fetcher: (...args: any[]) => any) {
-  console.log(key,fetcher,"111")
   return createDecorator((options, key) => {
-    options.computed = options.computed || {};
-    options.computed[key] = function() {
-      const { data, error } = useSWR(key, fetcher);
+    options.methods= options.methods || {};
+    options.methods[key] = function () {
+      let res = useSWR(key, fetcher)
+      console.log(res,"res")
+      let data=res.data, error = res.error
       return {
-        loading: !error && !data,
-        error,
-        data,
+          loading: !error && !data,
+          error: error,
+          data: data,
       };
     };
   });
