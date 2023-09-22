@@ -8,6 +8,9 @@ export default {
   output: {
     file: 'lib/index.js',
     format: 'cjs',
+    // format: 'umd',
+    // name:"VueCommonDecorator"
+    // sourcemap: true, 
   },
   plugins: [
     ts({

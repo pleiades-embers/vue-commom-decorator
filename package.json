@@ -16,8 +16,8 @@
     "tests": "tests"
   },
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "dev": "tsc -p ./src/tsconfig.json && rollup -c -w",
+    "build": "tsc -p ./src/tsconfig.json && rollup -c",
     "test": "jest"
   },
   "files": [
