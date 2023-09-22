@@ -1,14 +1,18 @@
+import ts from 'rollup-plugin-typescript2'
+import path from 'path'
+/**
+ * @type {import('rollup').RollupOptions}
+ */
 export default {
-  input: 'lib/index.js',
+  input: 'src/index.ts',
   output: {
-    file: 'lib/index.umd.js',
-    format: 'umd',
-    name: 'VueCommonDecorator',
-    globals: {
-      vue: 'Vue',
-      'vue-class-component': 'VueClassComponent',
-    },
-    exports: 'named',
+    file: 'lib/index.js',
+    format: 'cjs',
   },
-  external: ['vue', 'vue-class-component', 'reflect-metadata'],
+  plugins: [
+    ts({
+      tsconfig: 'tsconfig.json'
+  }),
+  ],
+  external: ['vue', 'vue-class-component', 'reflect-metadata',"swrv"],
 }

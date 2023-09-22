@@ -6,7 +6,6 @@ export function UseSWR(key: string, fetcher: (...args: any[]) => any) {
     options.methods= options.methods || {};
     options.methods[key] = function () {
       let res = useSWR(key, fetcher)
-      console.log(res,"res")
       let data=res.data, error = res.error
       return {
           loading: !error && !data,
